@@ -1,0 +1,15 @@
+.caption{
+  font-size: 2.2em;
+  line-height: 1.1;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 25px;
+}
+
+.head {
+  font-size: 1.2em;
+  line-height: 2.8;
+  text-align: left;
+  padding: 10px 20px 10px 0;
+  color: rgb(107, 107, 107);
+}
