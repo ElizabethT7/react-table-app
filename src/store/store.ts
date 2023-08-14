@@ -1,8 +1,10 @@
 import { combineReducers, configureStore} from '@reduxjs/toolkit';
 import {getTrainsApi} from '../services/getTrains';
+import characteristicsReducer from './reducers/characteristicsSlice';
 
 const rootReducer = combineReducers({
-  [getTrainsApi.reducerPath]: getTrainsApi.reducer
+  [getTrainsApi.reducerPath]: getTrainsApi.reducer,
+  characteristicsReducer,
 });
 
 export const setupStore = () => {

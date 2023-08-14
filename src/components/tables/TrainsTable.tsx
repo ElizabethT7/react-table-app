@@ -1,9 +1,8 @@
-import TrainsList from '../TrainsList';
-import './style.css';
+import TrainsList from '../lists/TrainsList';
 
 function TrainsTable(){
   return (
-    <table>
+    <table className='trains'>
       <caption className='caption'>
         Поезда
       </caption>
