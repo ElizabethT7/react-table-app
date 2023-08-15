@@ -5,7 +5,7 @@ import Error from '../Error';
 
 function TrainsList(){
   const {data: trains, error, isLoading} = getTrainsApi.useFetchAllTrainsQuery('');
-  console.log(trains);
+
   return (
     <>
       {isLoading && <Spinner />}

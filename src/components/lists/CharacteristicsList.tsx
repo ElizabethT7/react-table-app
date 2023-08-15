@@ -1,17 +1,19 @@
 import CharacteristicsItem from '../items/CharacteristicsItem';
 import { useAppSelector } from '../../hooks/redux';
-import { generateCode } from '../../utils';
 
 
 function CharacteristicsList(){
   const { characteristics } = useAppSelector((state) => state.characteristicsReducer);
-  console.log(characteristics)
+  const generateCode = (function (start = 0) {
+    return () => ++start;
+  }());
 
   return (
     <>
-      {characteristics && characteristics.map(characteristicsItem => (
-        <CharacteristicsItem characteristicsItem={characteristicsItem} key={generateCode()}/>
-      ))}
+      {characteristics && characteristics.map(characteristicsItem => {
+        const id = generateCode();
+        return <CharacteristicsItem characteristicsItem={characteristicsItem} key={id} id={id}/> 
+        })}
     </>
   )
 }

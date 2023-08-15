@@ -1,43 +1,24 @@
-import { useState } from 'react';
 import { ICharacteristics } from '../../types/ICharacteristics';
+import EngineAmperageCell from '../cell/EngineAmperageCell';
+import ForceCell from '../cell/ForceCell';
+import Speed from '../cell/Speed';
 
 interface CharacteristicsItemProps {
   characteristicsItem: ICharacteristics;
+  id: number;
 }
 
-function TrainItem ({characteristicsItem}: CharacteristicsItemProps){
-  const [engineAmperage, setEngineAmperage] = useState(characteristicsItem.engineAmperage);
-  const [force, setForce] = useState(characteristicsItem.force);
-  const [speed, setSpeed] = useState(characteristicsItem.speed);
-
+function TrainItem ({characteristicsItem, id}: CharacteristicsItemProps){
   return (
     <tr>
-      <td>
-        <input
-          value={engineAmperage}
-          onChange={({ target }) => setEngineAmperage(+target.value)}
-          type="number"
-          className='input'
-        >
-        </input>
-      </td>
-      <td>
-        <input
-          value={force}
-          onChange={({ target }) => setForce(+target.value)}
-          className='input'
-        >
-        </input>
-      </td>
-      <td>
-        <input
-          value={speed}
-          onChange={({ target }) => setSpeed(+target.value)}
-          type="number"
-          className='input'
-        >
-        </input>
-      </td>
+      {
+      characteristicsItem.engineAmperage &&
+        <EngineAmperageCell engineAmperage={characteristicsItem.engineAmperage}/>
+      }
+      {characteristicsItem.force &&
+        <ForceCell force={characteristicsItem.force}/>
+      }
+      <Speed speed={characteristicsItem.speed} id={id}/>
     </tr>
   )
 }

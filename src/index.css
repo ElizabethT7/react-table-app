@@ -56,15 +56,24 @@ body {
   padding-bottom: 40px;
 }
 
-.input {
-  border: 1px solid transparent;
+input {
+  border-radius: 4px;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-size: 1.1em;
   font-family: inherit;
   cursor: pointer;
+}
+
+.input {
+  border: 1px solid transparent;
   color: #213547;
+}
+
+.error {
+  border: 1px solid #ba2121;
+  color: #ba2121;
 }
 
 button {
@@ -81,14 +90,16 @@ button:hover {
   border-color: #646cff;
   color: #646cff;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 .disabled {
-  border-color: #969595;
-  color: #969595;
+  border-color: #c4c3c3;
+  color: #c4c3c3;
+}
+
+.disabled:hover {
+  cursor: not-allowed;;
+  border-color: #c4c3c3;
+  color: #c4c3c3;
 }
 
 .wrapper {
