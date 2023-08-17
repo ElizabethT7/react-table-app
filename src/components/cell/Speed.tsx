@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppDispatch } from '../../hooks/redux';
 import { characteristicsSlice } from '../../store/reducers/characteristicsSlice';
 
@@ -35,6 +35,10 @@ function SpeedCell ({speed, id}: SpeedCellProps){
       dispatch(setIsActive(false));
     }
   }
+
+  useEffect(() => {
+    setValue(speed.toString());
+  }, [speed]); 
 
   return (
     <td>

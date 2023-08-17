@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppDispatch } from '../../hooks/redux';
 import { characteristicsSlice } from '../../store/reducers/characteristicsSlice';
 
@@ -29,6 +29,10 @@ function EngineAmperageCell ({engineAmperage}: EngineAmperageCellProps){
       dispatch(setIsActive(false));
     }
   }
+
+  useEffect(() => {
+    setValue(engineAmperage.toString());
+  }, [engineAmperage]);
 
   return (
     <td>

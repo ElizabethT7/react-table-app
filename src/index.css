@@ -17,7 +17,7 @@ body {
 }
 
 .trains {
-  width: 30%;
+  width: 26%;
 }
 
 .caption{
@@ -106,6 +106,6 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 10%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 20px;
 }

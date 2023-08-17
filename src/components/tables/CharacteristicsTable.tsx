@@ -17,6 +17,7 @@ function CharacteristicsTable(){
           <th className='head'>Ток двигателя</th>
           <th className='head'>Сила тяги</th>
           <th className='head'>Скорость</th>
+          <th className='head'>Добавить строку</th>
         </tr>
       </thead>
       <tbody>

@@ -42,6 +42,14 @@ export const characteristicsSlice = createSlice({
         }
         return el;
       })
+    },
+    addPow(state) { 
+      const characteristic = {
+        speed: 0,
+        force: 1,
+        engineAmperage: 1
+      }
+      state.characteristics.splice(state.id, 0, characteristic);
     }
   },
 });
