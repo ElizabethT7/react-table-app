@@ -2,6 +2,9 @@
 
 Фронтенд приложение на React. Таблица поездов и их характеристик
 
+Deploy on
+https://react-table-app-ten.vercel.app/
+
 Tech stack
 React
 Typescript
